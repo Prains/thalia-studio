@@ -1,0 +1,57 @@
+/* header */
+header {
+  max-width: 880px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 428px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  max-width: 65px;
+  gap: 5px;
+}
+
+.header__text {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 300;
+  color: #282828;
+}
+
+.polygon {
+  object-fit: contain;
+  max-width: 8px;
+  max-height: 8px;
+  align-self: center;
+}
+
+.headerimges {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.like {
+  max-width: 20px;
+  max-height: 16.67px;
+}
+
+.basket {
+  max-width: 20px;
+  max-height: 19.68px;
+}
