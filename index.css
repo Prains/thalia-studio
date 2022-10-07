@@ -2,6 +2,7 @@
 @import "./blocks/header.css";
 @import "./blocks/main.css";
 @import "./blocks/soul.css";
+@import "./blocks/catal.css";
 
 * {
   box-sizing: border-box;
@@ -22,95 +23,4 @@
 main {
   margin: 0 auto;
   overflow: hidden;
-}
-
-.rope2 {
-  position: absolute;
-  left: 0;
-  top: 2058px;
-}
-
-.catal {
-  max-width: 880px;
-  margin: 0 auto;
-}
-
-.catal__title {
-  margin: 0 auto;
-  text-align: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 70px;
-  line-height: 78px;
-  margin-bottom: 70px;
-}
-
-.catal__frow {
-  display: flex;
-}
-
-.catal__text {
-  max-width: 280px;
-  align-self: baseline;
-  text-align: right;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 160%;
-  margin-left: 170px;
-  margin-top: 175px;
-}
-
-.catal_el {
-  max-width: 205px;
-  max-height: 344px;
-}
-
-.catal_el:nth-of-type(1) {
-  margin-top: 138px;
-  margin-right: 20px;
-}
-
-.el__title {
-  margin: 10px auto;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  text-align: center;
-}
-
-.el__text {
-  margin: 0 auto;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  opacity: 0.7;
-  text-align: center;
-}
-
-.catal__center {
-  max-width: 282px;
-  margin: 0 auto;
-  position: relative;
-  top: -90px;
-}
-
-.catal__center__title {
-  margin: 0 auto;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 33px;
-}
-
-.catal__center__text {
-  max-width: 158px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 160%;
-  border-bottom: 3px dashed #000000;
-  margin-top: 15px;
-}
-
-.catal__trow {
-  display: flex;
 }
