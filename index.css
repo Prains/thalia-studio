@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import "./blocks/header.css";
 @import "./blocks/main.css";
+@import "./blocks/soul.css";
 
 * {
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 .pointer {
@@ -21,71 +21,92 @@
 
 main {
   margin: 0 auto;
+  overflow: hidden;
 }
 
-.soul {
-  position: relative;
-  margin-top: 150px;
-  margin-bottom: 150px;
+.rope2 {
+  position: absolute;
+  left: 0;
+  top: 2058px;
 }
 
-.soul__section {
+.catal {
   max-width: 880px;
-  width: 100%;
   margin: 0 auto;
 }
 
-.soul__subsection {
+.catal__title {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 110px;
-}
-
-.soul__title {
-  margin: 0 auto;
+  text-align: center;
+  font-style: normal;
   font-weight: 400;
   font-size: 70px;
   line-height: 78px;
-  text-align: center;
+  margin-bottom: 70px;
 }
 
-.soul__text {
-  margin: 0 auto;
-  text-align: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  margin-top: 70px;
-  margin-bottom: 60px;
+.catal__frow {
+  display: flex;
 }
 
-.subsection__text {
-  margin: 0;
-  margin-bottom: 59px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 130%;
-  align-self: flex-end;
-}
-
-.undertext__uppertitle {
-  margin: 0;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 130%;
-  width: 150px;
-}
-.soul__undertext {
-  margin-top: 100px;
-}
-.undertext__text {
+.catal__text {
+  max-width: 280px;
+  align-self: baseline;
+  text-align: right;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 160%;
-  width: 190px;
+  margin-left: 170px;
+  margin-top: 175px;
+}
+
+.catal_el {
+  max-width: 205px;
+  max-height: 344px;
+}
+
+.catal_el:nth-of-type(1) {
+  margin-top: 138px;
+  margin-right: 20px;
+}
+
+.el__title {
+  margin: 10px auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+}
+
+.el__text {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.catal__center {
+  max-width: 282px;
+  margin: 0 auto;
+  position: relative;
+  top: -90px;
+}
+
+.catal__center__title {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 33px;
+}
+
+.catal__center__text {
+  max-width: 158px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  border-bottom: 3px dashed #000000;
+  margin-top: 15px;
 }
