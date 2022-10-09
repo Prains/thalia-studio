@@ -85,6 +85,8 @@
   line-height: 160%;
   border-bottom: 3px dashed #000000;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   gap: 16px;
   margin-top: 15px;

@@ -4,11 +4,19 @@
 @import "./blocks/soul.css";
 @import "./blocks/catal.css";
 @import "./blocks/materials.css";
-
+@import "./blocks/care.css";
 
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+}
+
+.arrowimg {
+  max-width: 14px;
+  max-height: 9px;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
 
 .pointer {
@@ -26,9 +34,4 @@
 main {
   margin: 0 auto;
   overflow: hidden;
-}
-
-.care {
-  margin: 150px auto 0 auto;
-  max-width: 880px;
 }
