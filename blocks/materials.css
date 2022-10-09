@@ -35,6 +35,10 @@
 .material__element {
   max-height: 491px;
   max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .material__elementimg {

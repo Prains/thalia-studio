@@ -27,3 +27,8 @@ main {
   margin: 0 auto;
   overflow: hidden;
 }
+
+.care {
+  margin: 150px auto 0 auto;
+  max-width: 880px;
+}
