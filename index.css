@@ -3,9 +3,12 @@
 @import "./blocks/main.css";
 @import "./blocks/soul.css";
 @import "./blocks/catal.css";
+@import "./blocks/materials.css";
+
 
 * {
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 .pointer {

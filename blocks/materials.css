@@ -1,0 +1,64 @@
+.rope3 {
+  position: absolute;
+  left: 0;
+  top: 3100px;
+}
+
+.rope4 {
+  position: absolute;
+  right: 0;
+  top: 2750px;
+}
+
+.materials {
+  position: relative;
+  max-width: 880px;
+  margin: 150px auto 0 auto;
+}
+
+.materials__title {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 78px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 78px;
+}
+
+.materials__elements {
+  display: flex;
+  gap: 58px;
+  align-items: center;
+  justify-content: center;
+}
+
+.material__element {
+  max-height: 491px;
+  max-width: 280px;
+}
+
+.material__elementimg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.material__img {
+  margin-bottom: 43px;
+}
+
+.material__element__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 33px;
+  color: #282828;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.material__element__text {
+  margin: 15px auto 0 auto;
+}
