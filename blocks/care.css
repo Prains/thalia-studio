@@ -1,5 +1,5 @@
 .care {
-  margin: 150px auto 0 auto;
+  margin: 150px auto 150px auto;
   max-width: 880px;
 }
 
@@ -49,6 +49,13 @@
   align-items: center;
 }
 
+.care__padding {
+padding-right: 37px;
+}
+
+.care__paddng2 {
+  padding-left: 37px;
+}
 .care__button {
   margin-top: 49px;
 }
