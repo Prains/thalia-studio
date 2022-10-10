@@ -1,5 +1,5 @@
 .main {
-  margin: 0 auto;
+  margin: 0 auto 150px auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -44,4 +44,28 @@
 
 .mainbutton:active {
   box-shadow: inset 0px 2px 15px rgba(88, 255, 146, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+  .main__title {
+    font-size: 32px;
+    line-height: 36px;
+    width: 280px;
+  }
+
+  .mainimg {
+    object-fit: contain;
+    width: 962.65px;
+    height: 313px;
+    position: relative;
+    left: -275px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+.mainimg {
+  left: -320px;
+}
+
 }

@@ -7,6 +7,9 @@ header {
   width: 100%;
   margin: 0 auto;
 }
+.header__burger {
+  display: none;
+}
 
 .menu {
   display: flex;
@@ -54,4 +57,37 @@ header {
 .basket {
   max-width: 20px;
   max-height: 19.68px;
+}
+
+
+.logoimg {
+  max-width: 140px;
+  max-height: 132px;
+}
+
+@media screen and (max-width: 767px) {
+
+header {
+  max-width: 280px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.menu {
+  display: none;
+}
+
+.logoimg {
+  max-width: 80px;
+  max-height: 70px;
+}
+
+.header__burger {
+  display: block;
+}
+
+.headerimges {
+  gap: 31px;
+}
+
 }
