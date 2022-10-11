@@ -47,6 +47,11 @@
 }
 
 @media screen and (max-width: 767px) {
+
+  .main {
+    margin-bottom: 80px;
+  }
+
   .main__title {
     font-size: 32px;
     line-height: 36px;

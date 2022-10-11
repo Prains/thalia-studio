@@ -9,6 +9,7 @@
 
 * {
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 .arrowimg {
@@ -30,4 +31,8 @@
 
 .text {
   font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  overflow: hidden;
 }

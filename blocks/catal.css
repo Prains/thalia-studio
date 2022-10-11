@@ -113,3 +113,42 @@
   width: 280px;
   height: 66px;
 }
+
+@media screen and (max-width: 767px) {
+  .rope2 {
+    display: none;
+  }
+
+  .catal__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .catal_el:nth-of-type(1) {
+  }
+
+  .catal_el {
+    width: 130px;
+    height: 233px;
+  }
+
+  .el__title {
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+  }
+
+  .el__text {
+    font-size: 14px;
+    line-height: 160%;
+    text-align: center;
+  }
+
+  .catal__frow {}
+
+  .cardimg {
+    max-width: 121px;
+    max-height: 167px;
+  }
+}

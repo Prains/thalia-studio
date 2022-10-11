@@ -78,6 +78,7 @@ header {
 }
 
 .logoimg {
+  align-self: start;
   max-width: 80px;
   max-height: 70px;
 }
@@ -87,6 +88,7 @@ header {
 }
 
 .headerimges {
+  margin-top: 23px;
   gap: 31px;
 }
 

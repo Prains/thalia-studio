@@ -66,3 +66,12 @@
 .material__element__text {
   margin: 15px auto 0 auto;
 }
+
+@media screen and (max-width: 767px) {
+.rope3 {
+  display: none;
+}
+.rope4 {
+  display: none;
+}
+}
