@@ -9,7 +9,6 @@
   margin: 50px auto 150px auto;
   max-height: 1034px;
 }
-
 .catal__title {
   margin: 0 auto;
   text-align: center;
@@ -19,11 +18,9 @@
   line-height: 78px;
   margin-bottom: 70px;
 }
-
 .catal__frow {
   display: flex;
 }
-
 .catal__text {
   max-width: 280px;
   align-self: baseline;
@@ -35,26 +32,22 @@
   margin-left: 170px;
   margin-top: 175px;
 }
-
 .catal_el {
   max-width: 205px;
   max-height: 344px;
 }
-
 .catal_el:nth-of-type(1) {
   margin-top: 138px;
   margin-right: 34px;
 }
-
-.el__title {
+.catal_el .el__title {
   margin: 10px auto;
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
   text-align: center;
 }
-
-.el__text {
+.catal_el .el__text {
   margin: 0 auto;
   font-weight: 400;
   font-size: 16px;
@@ -62,21 +55,16 @@
   opacity: 0.7;
   text-align: center;
 }
-
 .catal__center {
   max-width: 282px;
-  margin: 0 auto;
-  position: relative;
-  top: -90px;
+  margin: -90px auto 90px auto;
 }
-
 .catal__center__title {
   margin: 0 auto;
   font-weight: 400;
   font-size: 30px;
   line-height: 33px;
 }
-
 .catal__center__text {
   position: relative;
   z-index: 12;
@@ -91,22 +79,17 @@
   gap: 16px;
   margin-top: 15px;
 }
-
 .catal__center__text:hover {
   font-weight: 600;
   border-bottom: 3px solid #000000;
 }
-
 .catal__center__text:active {
-  color: #58FF92;
+  color: #58ff92;
 }
-
 .catal__trow {
   display: flex;
-  position: relative;
-  top: -205px;
+  margin-top: -188px;
 }
-
 .catal__trow__text {
   margin-top: 225px;
   margin-right: 170px;
@@ -118,37 +101,64 @@
   .rope2 {
     display: none;
   }
-
   .catal__title {
     font-weight: 400;
     font-size: 32px;
     line-height: 36px;
+    margin: 0 0 40px 0;
+    text-align: center;
   }
-
   .catal_el:nth-of-type(1) {
+    margin: 0;
+    align-self: start;
   }
-
   .catal_el {
-    width: 130px;
-    height: 233px;
+    align-self: end;
+    margin: -170px 0 0 0;
+    max-width: 130px;
+    max-height: 233px;
   }
-
-  .el__title {
+  .catal_el .el__title {
     font-size: 14px;
     line-height: 160%;
     text-align: center;
   }
-
-  .el__text {
+  .catal_el .el__text {
     font-size: 14px;
     line-height: 160%;
     text-align: center;
   }
-
-  .catal__frow {}
-
+  .catal__frow {
+    margin: 0 auto 30px auto;
+    max-width: 280px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .catal__frow .catal__text {
+    margin: 0 auto 30px auto;
+    order: -1;
+    text-align: center;
+  }
+  .catal__trow {
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 280px;
+  }
+  .catal__trow__text {
+    margin: 30px auto 0 auto;
+    text-align: center;
+    order: 3;
+  }
+  .catal__center {
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .cardimg {
     max-width: 121px;
     max-height: 167px;
   }
-}
+}/*# sourceMappingURL=catal.css.map */
