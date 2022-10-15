@@ -93,7 +93,7 @@
   }
 
   .soul {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   .soul__title {
@@ -144,5 +144,10 @@
     margin: 0 auto;
     order: 2;
     bottom: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .rope {
+    display: none;
   }
 }

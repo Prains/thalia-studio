@@ -98,6 +98,10 @@
 }
 
 @media screen and (max-width: 767px) {
+  .catal {
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
   .rope2 {
     display: none;
   }
@@ -160,5 +164,10 @@
   .cardimg {
     max-width: 121px;
     max-height: 167px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .rope2 {
+    display: none;
   }
 }/*# sourceMappingURL=catal.css.map */
