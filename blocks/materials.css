@@ -60,6 +60,29 @@
 
 .material__img {
   margin-bottom: 43px;
+  max-width: 262px;
+  width: 100%;
+}
+
+.material__popup {
+  max-width: 262px;
+  margin-bottom: 43px;
+  width: 100%;
+  background: linear-gradient(0deg, #d8f8e3, #d8f8e3);
+  border-radius: 300px;
+  display: none;
+}
+.material__popup__text {
+  max-width: 226px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+  margin: 48px 18px;
+}
+
+#rafia {
+  margin: 92px 18px;
 }
 
 @media screen and (max-width: 768px) {

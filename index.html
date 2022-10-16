@@ -1,166 +1,254 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./normalize.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./normalize.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="logoimg" class="logoimg pointer" />
+      <div class="menu">
+        <div class="catalog">
+          <p class="header__text text pointer">Каталог</p>
+          <img src="./images/Polygon.svg" alt="rectangle" class="polygon" />
+        </div>
+        <p class="header__text text pointer">Новинки</p>
+        <p class="header__text text pointer">Оплата и доставка</p>
+        <p class="header__text text pointer">Контакты</p>
+      </div>
+      <div class="headerimges">
+        <img src="./images/like.svg" alt="like" class="like pointer" />
+        <img src="./images/basket.svg" alt="basket" class="basket pointer" />
+        <img
+          src="./images/header__vector.svg"
+          alt="burger"
+          class="header__burger"
+        />
+      </div>
+    </header>
+    <main class="page">
+      <section class="main">
+        <h1 class="main__title title">Мастерская вязаного уюта</h1>
+        <img src="./images/mainimg.png" alt="mainimg" class="mainimg" />
+        <button type="button" name="button" class="mainbutton text pointer">
+          Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg" />
+        </button>
+      </section>
+      <section class="soul">
+        <img src="./images/rope1.png" alt="rope" class="rope" />
+        <div class="soul__section">
+          <h2 class="title soul__title">Для души и красоты</h2>
+          <p class="text soul__text">
+            Thalia Studio - это изделия из натуральных материалов таких, как
+            джут и рафия. Это красивые сумочки, созданные с душой и любовью к
+            своему делу.
+          </p>
+          <div class="soul__subsection">
+            <p class="subsection__text title">Ручная работа</p>
+            <img src="./images/image_jute.png" alt="jute" />
+            <div class="soul__undertext">
+              <p class="undertext__uppertitle title">Джут</p>
+              <p class="undertext__text text">
+                Натуральное волокно из Юго-Восточной Азии
+              </p>
+            </div>
+          </div>
+          <div class="soul__imgrow">
+            <img src="./images/handmade.png" alt="" />
+            <div class="imgrow__text">
+              <p class="undertext__uppertitle title">Рафия</p>
+              <p class="undertext__text text">
+                Натуральное волокно из листьев пальмы
+              </p>
+            </div>
+            <img src="./images/rafia.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="catal">
+        <img src="./images/rope2.png" alt="ropeimg" class="rope2" />
+        <h2 class="catal__title title">Каталог</h2>
+        <div class="catal__frow">
+          <div class="catal_el">
+            <img src="./images/rafi.png" alt="cardimg" class="cardimg" />
+            <p class="el__title text">Сумочка из джута</p>
+            <p class="el__text text">8900 Р</p>
+          </div>
+          <div class="catal_el">
+            <img src="./images/juta.png" alt="cardimg" class="cardimg" />
+            <p class="el__title text">Сумочка из рафии</p>
+            <p class="el__text text">9300 р</p>
+          </div>
+          <p class="catal__text text">
+            Изделия ручной работы дополняют повседневные образы и делают их
+            уникальным и неповторимым.
+          </p>
+        </div>
+        <div class="catal__center">
+          <p class="catal__center__title title">Сумки, аксесуры и декор</p>
+          <p class="catal__center__text text pointer">
+            Перейти в каталог<img
+              src="./images/arrow.svg"
+              alt="arrowimg"
+              class=""
+            />
+          </p>
+        </div>
+        <div class="catal__trow">
+          <p class="catal__trow__text text">
+            Каждое изделие содержит в себе только лучшие натуральные материалы и
+            частичку души.
+          </p>
+          <div class="catal_el zero">
+            <img src="./images/juta.png" alt="cardimg" class="cardimg" />
+            <p class="el__title text">Сумочка из рафии</p>
+            <p class="el__text text">9300 р</p>
+          </div>
+          <div class="catal_el">
+            <img src="./images/juta.png" alt="cardimg" class="cardimg" />
+            <p class="el__title text">Сумочка из рафии</p>
+            <p class="el__text text">9300 р</p>
+          </div>
+        </div>
+      </section>
+      <img src="./images/rope4.png" alt="" class="rope4" />
+      <img src="./images/rope3.png" alt="" class="rope3" />
+      <section class="materials">
+        <h2 class="title materials__title">Натуральные материалы</h2>
+        <div class="materials__elements">
+          <div class="material__element">
+            <img
+              src="./images/materials__just.png"
+              alt=""
+              class="material__img"
+              id="matJutImg"
+            />
+            <div class="material__popup" id="material__jute__popup">
+              <p class="material__popup__text text" id="material__jute__popup-text">
+                Джут — натуральное текстильное волокно, изготавливаемое из
+                растений одноимённого рода. Из этих волокон производят
+                преимущественно мешки, канаты, ковры, мебельные материи и
+                прочее. Джут применяется в смеси с абельмошевым волокном для
+                грубых тканей, например мешечной.
+              </p>
+            </div>
+            <p class="title material__element__title">Джут</p>
+            <p class="catal__center__text text pointer material__element__text" id="material__jute__link">
+              Узнать больше<img
+                src="./images/arrow.svg"
+                alt="arrowimg"
+                class=""
+              />
+            </p>
+          </div>
+          <div class="material__elementimg">
+            <img src="./images/materials__jute.png" alt="" />
+            <img src="./images/materials__rafia1.png" alt="" />
+          </div>
+          <div class="material__element">
+            <img
+              src="./images/materials__rafiaright.png"
+              alt=""
+              class="material__img"
+              id="matRafImg"
+            />
+            <div class="material__popup" id='material__rafia__popup'>
+              <p class="material__popup__text text " id="rafia">
+                Ра́фия — род растений семейства Пальмовые, родиной которых
+                является тропическая Африка и в особенности Мадагаскар, а также
+                для одного вида — Центральная и Южная Америка. Достигают в
+                высоту 16 метров.
+              </p>
+            </div>
+            <p class="title material__element__title">Рафия</p>
+            <p class="catal__center__text text pointer material__element__text" id="material__rafia__link">
+              Узнать больше<img
+                src="./images/arrow.svg"
+                alt="arrowimg"
+                class=""
+              />
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="care">
+        <h2 class="care__title title">Уход за вещами</h2>
+        <div class="care__elements">
+          <div class="care__element">
+            <img src="./images/materials__jute1.png" alt="" class="care__img" />
+            <div class="care__wrapper care__paddng2">
+              <p class="care__text title care__firstmargin">
+                Уход за вещами из джута
+              </p>
+              <p class="catal__center__text text">
+                <img
+                  src="./images/arrow.svg"
+                  alt="arrowimg"
+                  class="rotate arrowimg"
+                />Узнать больше
+              </p>
+            </div>
+          </div>
+          <div class="care__element">
+            <div class="care__wrapper care__padding">
+              <p class="care__text care__margin title">
+                Уход за вещами из рафии
+              </p>
+              <p class="catal__center__text text">
+                Узнать больше<img
+                  src="./images/arrow.svg"
+                  alt="arrowimg"
+                  class="arrowimg"
+                />
+              </p>
+            </div>
+            <img src="./images/materials__rafia.png" alt="" class="care__img" />
+          </div>
+        </div>
+        <button
+          type="button"
+          name="button"
+          class="mainbutton text pointer care__button"
+        >
+          Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg" />
+        </button>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <img src="./images/footer__logo.svg" alt="" class="footer__logo" />
+        <div class="footer__nav">
+          <div class="footer__menu">
+            <h3 class="menu__title text">Каталог</h3>
+            <p class="menu__text text">Сумки и аксессуары</p>
+            <p class="menu__text text">Функциональный декор</p>
+            <p class="menu__text text">Новинки</p>
+          </div>
+          <div class="footer__menu">
+            <h3 class="menu__title text">Оплата и доставка</h3>
+            <p class="menu__text text">Как заказать</p>
+            <p class="menu__text text">Обмен и возврат</p>
+            <p class="menu__text text">Контакты</p>
+          </div>
+        </div>
+        <div class="footer__social">
+          <p class="menu__text footer__social__text text">7 916 142 14 53</p>
+          <div class="footer__social__icons">
+            <a href="#"><img src="./images/image_telegram.svg" alt="" /></a>
+            <a href="https://vk.com/thaliastudio"
+              ><img src="./images/image_vk.svg" alt=""
+            /></a>
+            <a href="#"><img src="./images/image_instagram.svg" alt="" /></a>
+            <a href="#"><img src="./images/image_whatsapp.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-<body>
-  <header>
-    <img src="./images/logo.svg" alt="logoimg" class="logoimg pointer">
-    <div class="menu">
-      <div class="catalog">
-        <p class='header__text text pointer'>Каталог</p>
-        <img src="./images/Polygon.svg" alt="rectangle" class="polygon">
-      </div>
-      <p class='header__text text pointer'>Новинки</p>
-      <p class='header__text text pointer'>Оплата и доставка</p>
-      <p class='header__text text pointer'>Контакты</p>
-    </div>
-    <div class="headerimges">
-      <img src="./images/like.svg" alt="like" class="like pointer">
-      <img src="./images/basket.svg" alt="basket" class="basket pointer">
-      <img src="./images/header__vector.svg" alt="burger" class="header__burger">
-    </div>
-  </header>
-  <main class="page">
-    <section class="main">
-      <h1 class="main__title title">Мастерская вязаного уюта</h1>
-      <img src="./images/mainimg.png" alt="mainimg" class="mainimg">
-      <button type="button" name="button" class="mainbutton text pointer">Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg"></button>
-    </section>
-    <section class="soul">
-      <img src="./images/rope1.png" alt="rope" class="rope">
-      <div class="soul__section">
-        <h2 class="title soul__title">Для души и красоты</h2>
-        <p class="text soul__text">Thalia Studio - это изделия из натуральных материалов таких, как джут и рафия. Это красивые сумочки, созданные с душой и любовью к своему делу.</p>
-        <div class="soul__subsection">
-          <p class="subsection__text title">Ручная работа</p>
-          <img src="./images/image_jute.png" alt="jute">
-          <div class="soul__undertext">
-            <p class="undertext__uppertitle title">Джут</p>
-            <p class="undertext__text text">Натуральное волокно из Юго-Восточной Азии</p>
-          </div>
-        </div>
-        <div class="soul__imgrow">  
-          <img src="./images/handmade.png" alt="">
-          <div class="imgrow__text">
-            <p class="undertext__uppertitle title">Рафия</p>
-            <p class="undertext__text text">Натуральное волокно из листьев пальмы</p>
-          </div>
-          <img src="./images/rafia.png" alt="">
-        </div>
-      </div>
-    </section>
-    <section class="catal">
-      <img src="./images/rope2.png" alt="ropeimg" class="rope2">
-      <h2 class="catal__title title">Каталог</h2>
-      <div class="catal__frow">
-        <div class="catal_el">
-          <img src="./images/rafi.png" alt="cardimg" class="cardimg">
-          <p class="el__title text">Сумочка из джута</p>
-          <p class="el__text text">8900 Р</p>
-        </div>
-        <div class="catal_el">
-          <img src="./images/juta.png" alt="cardimg" class="cardimg">
-          <p class="el__title text">Сумочка из рафии</p>
-          <p class="el__text text">9300 р</p>
-        </div>
-        <p class="catal__text text">Изделия ручной работы дополняют повседневные образы и делают их уникальным и неповторимым.</p>
-      </div>
-      <div class="catal__center">
-        <p class="catal__center__title title">Сумки, аксесуры и декор</p>
-        <p class="catal__center__text text pointer">Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg" class=""></p>
-      </div>
-      <div class="catal__trow">
-        <p class="catal__trow__text text">Каждое изделие содержит в себе только лучшие натуральные материалы и частичку души.</p>
-        <div class="catal_el zero">
-          <img src="./images/juta.png" alt="cardimg" class="cardimg">
-          <p class="el__title text">Сумочка из рафии</p>
-          <p class="el__text text">9300 р</p>
-        </div>
-        <div class="catal_el">
-          <img src="./images/juta.png" alt="cardimg" class="cardimg">
-          <p class="el__title text">Сумочка из рафии</p>
-          <p class="el__text text">9300 р</p>
-        </div>
-      </div>
-    </section>
-    <img src="./images/rope4.png" alt="" class="rope4">
-    <img src="./images/rope3.png" alt="" class="rope3">
-    <section class="materials">
-      <h2 class="title materials__title">Натуральные материалы</h2>
-      <div class="materials__elements">
-        <div class="material__element">
-          <img src="./images/materials__just.png" alt="" class="material__img">
-          <p class="title material__element__title">Джут</p>
-          <p class="catal__center__text text pointer material__element__text">Узнать больше<img src="./images/arrow.svg" alt="arrowimg" class=""></p>
-        </div>
-        <div class="material__elementimg">
-          <img src="./images/materials__jute.png" alt="">
-          <img src="./images/materials__rafia1.png" alt="">
-        </div>
-        <div class="material__element">
-          <img src="./images/materials__rafiaright.png" alt="" class="material__img">
-          <p class="title material__element__title">Рафия</p>
-          <p class="catal__center__text text pointer material__element__text">Узнать больше<img src="./images/arrow.svg" alt="arrowimg" class=""></p>
-        </div>
-      </div>
-    </section>
-    <section class="care">
-      <h2 class="care__title title">Уход за вещами</h2>
-      <div class="care__elements">
-        <div class="care__element">
-          <img src="./images/materials__jute1.png" alt="" class="care__img">
-          <div class="care__wrapper care__paddng2">
-            <p class="care__text title care__firstmargin">Уход за вещами из джута</p>
-            <p class="catal__center__text text"><img src="./images/arrow.svg" alt="arrowimg" class="rotate arrowimg">Узнать больше</p>
-          </div>
-        </div>
-        <div class="care__element">
-          <div class="care__wrapper care__padding">
-            <p class="care__text care__margin title">Уход за вещами из рафии</p>
-            <p class="catal__center__text text">Узнать больше<img src="./images/arrow.svg" alt="arrowimg" class="arrowimg"></p>
-          </div>
-          <img src="./images/materials__rafia.png" alt="" class="care__img">
-        </div>
-      </div>
-      <button type="button" name="button" class="mainbutton text pointer care__button">Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg"></button>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="footer__content">
-      <img src="./images/footer__logo.svg" alt="" class="footer__logo">
-      <div class="footer__nav">
-        <div class="footer__menu">
-          <h3 class="menu__title text">Каталог</h3>
-          <p class="menu__text text">Сумки и аксессуары</p>
-          <p class="menu__text text">Функциональный декор</p>
-          <p class="menu__text text">Новинки</p>
-        </div>
-        <div class="footer__menu">
-          <h3 class="menu__title text">Оплата и доставка</h3>
-          <p class="menu__text text">Как заказать</p>
-          <p class="menu__text text">Обмен и возврат</p>
-          <p class="menu__text text">Контакты</p>
-        </div>
-      </div>
-      <div class="footer__social">
-        <p class="menu__text footer__social__text text">7 916 142 14 53</p>
-        <div class="footer__social__icons">
-          <a href="#"><img src="./images/image_telegram.svg" alt=""></a>
-          <a href="https://vk.com/thaliastudio"><img src="./images/image_vk.svg" alt=""></a>
-          <a href="#"><img src="./images/image_instagram.svg" alt=""></a>
-          <a href="#"><img src="./images/image_whatsapp.svg" alt=""></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="./index.js" charset="utf-8"></script>
-</body>
-
+    <script src="./index.js" charset="utf-8"></script>
+  </body>
 </html>

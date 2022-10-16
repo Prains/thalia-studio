@@ -10,6 +10,14 @@
   box-sizing: border-box;
 }
 
+.display {
+  display: none;
+}
+
+.undisplay {
+  display: block;
+}
+
 .arrowimg {
   max-width: 14px;
   max-height: 9px;
