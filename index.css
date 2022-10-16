@@ -6,8 +6,14 @@
 @import "./blocks/materials.css";
 @import "./blocks/care.css";
 @import "./blocks/footer.css";
+@import url("./blocks/overlay.css");
 * {
   box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  opacity: 1;
 }
 
 .display {

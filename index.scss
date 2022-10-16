@@ -6,12 +6,23 @@
 @import "./blocks/materials.css";
 @import "./blocks/care.css";
 @import "./blocks/footer.css";
+@import url("./blocks/overlay.css");
 $border: 1px solid red;
 
 * {
   box-sizing: border-box;
 }
 
+.flex {
+  display: flex;
+  opacity: 1;
+}
+.display {
+  display: none;
+}
+.undisplay {
+  display: block;
+}
 .arrowimg {
   max-width: 14px;
   max-height: 9px;
