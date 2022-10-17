@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <img src="./images/logo.svg" alt="logoimg" class="logoimg pointer" />
       <div class="menu">
         <div class="catalog">
@@ -18,7 +18,9 @@
           <div class="catalog__popup">
             <p class="catalog__popup__text text pointer">Все изделия</p>
             <p class="catalog__popup__text text pointer">Сумки и аксессуары</p>
-            <p class="catalog__popup__text text pointer">Функциональный декор</p>
+            <p class="catalog__popup__text text pointer">
+              Функциональный декор
+            </p>
           </div>
         </div>
         <p class="header__text text pointer">Новинки</p>
@@ -35,6 +37,66 @@
         />
       </div>
     </header>
+    <div class="burger">
+      <div class="burger__header">
+        <img
+          src="./images/burger__logo.svg"
+          alt="logoimg"
+          class="burger__header__img pointer"
+        />
+        <div class="burger__header__imges">
+          <img src="./images/like.svg" alt="like" class="like pointer" />
+          <img src="./images/basket.svg" alt="basket" class="basket pointer" />
+          <img
+            src="./images/burger__vector.svg"
+            alt="vector"
+            class="burger__vector pointer"
+          />
+        </div>
+      </div>
+      <div class="burger__content">
+        <div class="catalog">
+          <p class="header__text text pointer burger__catalog__title">Каталог</p>
+          <img src="./images/Polygon.svg" alt="rectangle" class="polygon" />
+        </div>
+        <div class="burger__content__catalog-popup">
+          <p class="burger__content__catalog-popup__text text pointer">Сумки и аксессуары</p>
+          <p class="burger__content__catalog-popup__text text pointer">Функциональный декор</p>
+        </div>
+        <p class="burger__content__text text pointer">Новинки</p>
+        <p class="burger__content__text text pointer">Оплата и доставка</p>
+        <p class="burger__content__text text pointer">Контакты</p>
+      </div>
+      <div class="burger__footer">
+        <p class="burger__footer__text text">7 916 142 14 53</p>
+        <div class="burger__footer__social">
+          <a href="#"
+            ><img
+              src="./images/image_telegram.svg"
+              alt=""
+              class="burger__footer__social__icon"
+          /></a>
+          <a href="https://vk.com/thaliastudio"
+            ><img
+              src="./images/image_vk.svg"
+              alt=""
+              class="burger__footer__social__icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="./images/image_instagram.svg"
+              alt=""
+              class="burger__footer__social__icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="./images/image_whatsapp.svg"
+              alt=""
+              class="burger__footer__social__icon"
+          /></a>
+        </div>
+      </div>
+    </div>
     <main class="page">
       <section class="main">
         <h1 class="main__title title">Мастерская вязаного уюта</h1>
@@ -260,15 +322,15 @@
         <div class="footer__nav">
           <div class="footer__menu">
             <h3 class="menu__title text">Каталог</h3>
-            <p class="menu__text text">Сумки и аксессуары</p>
-            <p class="menu__text text">Функциональный декор</p>
-            <p class="menu__text text">Новинки</p>
+            <p class="menu__text text pointer">Сумки и аксессуары</p>
+            <p class="menu__text text pointer">Функциональный декор</p>
+            <p class="menu__text text pointer">Новинки</p>
           </div>
           <div class="footer__menu">
             <h3 class="menu__title text">Оплата и доставка</h3>
-            <p class="menu__text text">Как заказать</p>
-            <p class="menu__text text">Обмен и возврат</p>
-            <p class="menu__text text">Контакты</p>
+            <p class="menu__text text pointer">Как заказать</p>
+            <p class="menu__text text pointer">Обмен и возврат</p>
+            <p class="menu__text text pointer">Контакты</p>
           </div>
         </div>
         <div class="footer__social">

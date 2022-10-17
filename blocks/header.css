@@ -1,5 +1,5 @@
 /* header */
-header {
+.header {
   max-width: 880px;
   display: flex;
   justify-content: space-between;
@@ -59,6 +59,7 @@ header {
   line-height: 19px;
   font-weight: 300;
   color: #282828;
+  margin: 0;
 }
 
 .polygon {
@@ -92,7 +93,7 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  header {
+  .header {
     max-width: 280px;
     align-items: center;
     margin-bottom: 25px;

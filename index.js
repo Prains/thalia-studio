@@ -11,8 +11,36 @@ let overlay = document.querySelector(".overlay");
 let careJuteLink = document.querySelector(".care__jute__link");
 let careRafiaLink = document.querySelector(".care__rafia__link");
 let overlayLink = document.querySelector(".overlay__block__link");
-let headTextCat = document.querySelector('.header__text__catalog');
-let headCatPop = document.querySelector('.catalog__popup')
+let headTextCat = document.querySelector(".header__text__catalog");
+let headCatPop = document.querySelector(".catalog__popup");
+let headBurgLink = document.querySelector(".header__burger");
+let burgCatTitle = document.querySelector(".burger__catalog__title");
+let burg = document.querySelector(".burger");
+let burgcls = document.querySelector(".burger__vector");
+let burgCatPopup = document.querySelector(".burger__content__catalog-popup");
+let pageContent = [
+  (page = document.querySelector(".page")),
+  (footer = document.querySelector(".footer")),
+  (header = document.querySelector(".header")),
+];
+
+headBurgLink.addEventListener("click", () => {
+  for (let i = 0; i < pageContent.length; i++) {
+    pageContent[i].classList.toggle("display");
+  }
+  burg.classList.toggle("flex");
+});
+
+burgCatTitle.addEventListener("click", () => {
+  burgCatPopup.classList.toggle("undisplay");
+});
+
+burgcls.addEventListener("click", () => {
+  for (let i = 0; i < pageContent.length; i++) {
+    pageContent[i].classList.toggle("display");
+  }
+  burg.classList.toggle("flex");
+});
 
 function makeItPopUp(link, img, pop) {
   link.addEventListener("click", () => {
