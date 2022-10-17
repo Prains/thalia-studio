@@ -11,6 +11,8 @@ let overlay = document.querySelector(".overlay");
 let careJuteLink = document.querySelector(".care__jute__link");
 let careRafiaLink = document.querySelector(".care__rafia__link");
 let overlayLink = document.querySelector(".overlay__block__link");
+let headTextCat = document.querySelector('.header__text__catalog');
+let headCatPop = document.querySelector('.catalog__popup')
 
 function makeItPopUp(link, img, pop) {
   link.addEventListener("click", () => {
@@ -24,6 +26,8 @@ function overlayPopup(link, overlay) {
     overlay.classList.toggle("flex");
   });
 }
+
+overlayPopup(headTextCat, headCatPop);
 
 overlayPopup(careJuteLink, overlay);
 
