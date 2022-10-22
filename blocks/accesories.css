@@ -1,0 +1,47 @@
+.flex {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .display {
+    display: none;
+  }
+  
+  .undisplay {
+    display: block;
+  }
+  
+  .arrowimg {
+    max-width: 14px;
+    max-height: 9px;
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  .title {
+    font-family: "Comfortaa", cursive;
+  }
+  
+  .text {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .page {
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #282828;
+  }
+
+  .bold {
+    font-weight: 600; 
+  }
