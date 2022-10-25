@@ -1,3 +1,4 @@
+
 let matJutPop = document.getElementById("material__jute__popup");
 let matRafPop = document.getElementById("material__rafia__popup");
 let matJutText = document.getElementById("material__jute__popup-text");
