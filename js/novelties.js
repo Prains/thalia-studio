@@ -14,13 +14,13 @@ const novImg = document.querySelector(".novelties__image");
 let count = 0;
 const novArray = [
   {
-    img: "./images/novelties__card1.jpg",
+    img: "../images/novelties__card1.jpg",
     title: "Кошелёк",
     text: "Кошелёк из натуральной кожи с ручной обвязкой. Ремешок можно использовать как брелок для ключей",
     price: "2000 р",
   },
   {
-    img: "./images/novelties__card2.jpg",
+    img: "../images/novelties__card2.jpg",
     title: "Торба",
     text: "Торба из полиэфирного шнура с кожаными элементами. Клапан с магнитной кнопкой, кожаное дно, наружный карман. Подкладка по желанию",
     price: "4200 р",
