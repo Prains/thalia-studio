@@ -53,6 +53,7 @@
     width: 100%;
     max-width: 402px;
     max-height: 552px;
+    border-radius: 130px;
   }
   
   @media screen and (max-width: 768px) {

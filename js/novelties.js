@@ -13,25 +13,24 @@ const novLink = document.querySelector(
 const novImg = document.querySelector(".novelties__image");
 let count = 0;
 const novArray = [
-  (novBaseD = {
-    img: "./images/novelties__card.svg",
-    title: "Сумочка из джута",
-    text: "Сумка из джута в бежевых и зеленых оттенках с кожанными ремешками.Подходит к любым повседневным образам элегантно дополняя их.Вмещает в себя как небольшие необходимые вещи, так и объемные предметы, например, ноутбук.",
-    price: "8500 р",
-  }),
-  (novBaseF = {
-    img: "./images/juta.png",
-    title: "123",
-    text: "1234",
-    price: "12345",
-  }),
-  (novBaseS = {
-    img: "./images/juta.png",
-    title: "123",
-    text: "1234",
-    price: "123456",
-  }),
+  {
+    img: "./images/novelties__card1.jpg",
+    title: "Кошелёк",
+    text: "Кошелёк из натуральной кожи с ручной обвязкой. Ремешок можно использовать как брелок для ключей",
+    price: "2000 р",
+  },
+  {
+    img: "./images/novelties__card2.jpg",
+    title: "Торба",
+    text: "Торба из полиэфирного шнура с кожаными элементами. Клапан с магнитной кнопкой, кожаное дно, наружный карман. Подкладка по желанию",
+    price: "4200 р",
+  },
 ];
+
+novTitle.textContent = novArray[0].title;
+novText.textContent = novArray[0].text;
+novImg.src = novArray[0].img;
+novPrice.textContent = novArray[0].price;
 
 novLink.addEventListener("click", () => {
   count++;
