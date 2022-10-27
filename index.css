@@ -72,6 +72,13 @@
 .catalog-page__filter__search__dropdown__popup {
   display: none;
 }
+.catalog-page__items {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 27px;
+       column-gap: 27px;
+  row-gap: 60px;
+}
 .catalog-page__items__item {
   max-width: 205px;
   display: flex;
