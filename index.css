@@ -92,6 +92,8 @@
   color: #282828;
   text-align: center;
   margin: 16px auto 5px auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .catalog-page__items__item__wrapper {
   display: flex;
@@ -107,6 +109,8 @@
   margin: 0;
 }
 .catalog-page__items__item__img {
-  max-width: 191px;
-  max-height: 264px;
+  width: 191px;
+  height: 264px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */

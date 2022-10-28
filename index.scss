@@ -93,6 +93,8 @@ $border: 1px solid red;
         color: #282828;
         text-align: center;
         margin: 16px auto 5px auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       &__wrapper {
         display: flex;
@@ -108,8 +110,9 @@ $border: 1px solid red;
         }
       }
       &__img {
-        max-width: 191px;
-        max-height: 264px;
+        width: 191px;
+        height: 264px;
+        object-fit: cover;
       }
     }
   }
