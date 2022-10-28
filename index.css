@@ -65,12 +65,39 @@
   font-family: "Open Sans", "Arial", sans-serif;
 }
 .catalog-page__filter__search__dropdown__text {
+  width: 165px;
   margin: 0;
   font-size: 14px;
   line-height: 17px;
 }
 .catalog-page__filter__search__dropdown__popup {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-self: start;
+  gap: 10px;
+  position: absolute;
+  background: #ffffff;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5);
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.catalog-page__filter__search__dropdown__popup__text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+}
+.catalog-page__filter__search__dropdown__popup__text:last-of-type {
+  margin-bottom: 10px;
+}
+.catalog-page__filter__search__dropdown__popup__text:first-of-type {
+  margin-top: 10px;
+}
+.catalog-page__filter__search__dropdown__popup__text:hover {
+  font-weight: 600;
 }
 .catalog-page__items {
   display: flex;
@@ -113,4 +140,5 @@
   height: 264px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 100px;
 }/*# sourceMappingURL=index.css.map */

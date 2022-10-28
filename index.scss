@@ -66,12 +66,39 @@ $border: 1px solid red;
       }
       &__dropdown {
         &__text {
+          width: 165px;
           margin: 0;
           font-size: 14px;
           line-height: 17px;
         }
         &__popup {
           display: none;
+          flex-direction: column; 
+          justify-content: center;
+          align-self: start;
+          gap: 10px;
+          position: absolute;
+          background: #ffffff;
+          border-width: 1px 0px;
+          border-style: solid;
+          border-color: rgba(0, 0, 0, 0.5);
+          padding-left: 4px;
+          padding-right: 4px;
+          &__text {
+            &:last-of-type {
+              margin-bottom: 10px;
+            }
+            &:first-of-type {
+              margin-top: 10px;
+            }
+            margin: 0;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            &:hover {
+              font-weight: 600;
+            }
+          }
         }
       }
     }
@@ -113,6 +140,7 @@ $border: 1px solid red;
         width: 191px;
         height: 264px;
         object-fit: cover;
+        border-radius: 100px;
       }
     }
   }

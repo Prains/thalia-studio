@@ -62,6 +62,19 @@ const cards = [
     price: "1200 р",
   },
 ];
+const filterPopup = document.querySelector(
+  ".catalog-page__filter__search__dropdown__popup"
+);
+const filterText = document.querySelector(
+  ".catalog-page__filter__search__dropdown__text"
+);
+const popupText = document.querySelectorAll('.catalog-page__filter__search__dropdown__popup__text');
+const polygon = document.querySelector('.polygon');
+
+function createPolygon() {
+  const element = polygon.cloneNode(true);
+  return element
+}
 
 function createElement(template, img, title, price) {
   const element = template.cloneNode(true);
@@ -73,8 +86,20 @@ function createElement(template, img, title, price) {
   return element;
 }
 
+filterText.addEventListener("click", () => {
+  filterPopup.classList.toggle('flex');
+});
+
 for (let i = 0; i < cards.length; i++) {
   items.prepend(
     createElement(template, cards[i].img, cards[i].title, cards[i].price)
   );
 }
+
+
+for (let i = 0; i < popupText.length; i++) {
+  popupText[i].addEventListener('click', ()=> {
+    filterText.innerHTML = popupText[i].innerHTML;
+  })
+}
+
