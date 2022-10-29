@@ -4,102 +4,206 @@ const cards = [
   {
     img: "../images/catalog1.jpg",
     title: "Торба",
-    price: "4200 р",
+    price: 4200,
+    order: 1,
   },
   {
     img: "../images/catalog2.jpg",
     title: "Сумка с бахромой",
-    price: "5200 р",
+    price: 5200,
+    order: 2,
   },
   {
     img: "../images/catalog3.jpg",
     title: "Дорожка на стол",
-    price: "2000 р",
+    price: 2000,
+    order: 3,
   },
   {
     img: "../images/catalog4.jpg",
     title: "Салфетница",
-    price: "1.500 р",
+    price: 1500,
+    order: 4,
   },
   {
     img: "../images/catalog5.jpg",
     title: "Сумка Таби",
-    price: "3200 р",
+    price: 3200,
+    order: 5,
   },
   {
     img: "../images/catalog6.jpg",
     title: "Сумка летняя Сансара",
-    price: "5500 р",
+    price: 5500,
+    order: 6,
   },
   {
     img: "../images/catalog7.jpg",
     title: "Сумка с рогаликами",
-    price: "4.200 р",
+    price: 4200,
+    order: 7,
   },
   {
     img: "../images/catalog8.jpg",
     title: "Кардхолдер",
-    price: "от 500 р",
+    price: 500,
+    order: 8,
   },
   {
     img: "../images/catalog9.jpg",
     title: "Бутылочница из джута",
-    price: "1500 р",
+    price: 1500,
+    order: 9,
   },
   {
     img: "../images/catalog10.jpg",
     title: "Лежанка для питомцев",
-    price: "От 3.000 р",
+    price: 3000,
+    order: 10,
   },
   {
     img: "../images/catalog11.jpg",
     title: "Набор корзин «Свадебные»",
-    price: "От 3.000 р",
+    price: 3000,
+    order: 11,
   },
   {
     img: "../images/catalog12.jpg",
     title: "Корзина «Рыбка»",
-    price: "1200 р",
+    price: 1200,
+    order: 12,
   },
 ];
+const tags = [];
 const filterPopup = document.querySelector(
   ".catalog-page__filter__search__dropdown__popup"
 );
 const filterText = document.querySelector(
   ".catalog-page__filter__search__dropdown__text"
 );
-const popupText = document.querySelectorAll('.catalog-page__filter__search__dropdown__popup__text');
-const polygon = document.querySelector('.polygon');
+const popupText = document.querySelectorAll(
+  ".catalog-page__filter__search__dropdown__popup__text"
+);
 
-function createPolygon() {
-  const element = polygon.cloneNode(true);
-  return element
-}
+const filter = [
+  {
+    function: () => {
+      cards.sort((a, b) => {
+        return a.price - b.price;
+      });
+      removeElements();
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
+  {
+    function: () => {
+      cards.sort((a, b) => {
+        return b.price - a.price;
+      });
+      removeElements();
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
+  {
+    function: () => {
+      removeElements();
+      cards.sort((a, b) => {
+        return b.order - a.order;
+      });
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
+  {
+    function: () => {
+      removeElements();
+      cards.sort((a, b) => {
+        return a.order - b.order;
+      });
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
+];
+
+filter[0].function();
 
 function createElement(template, img, title, price) {
   const element = template.cloneNode(true);
+  const heart = element.querySelector(
+    ".catalog-page__items__item__wrapper__like"
+  );
+  if (localStorage.getItem("item") !== null) {
+    if (~localStorage.getItem("item").indexOf(title)) {
+      heart.classList.toggle("liked");
+    }
+  }
+  heart.addEventListener("click", () => {
+    heart.classList.toggle("liked");
+    if (
+      heart.classList.contains("liked")
+        ? localStorage.setItem("item", localStorage.getItem("item") + title)
+        : localStorage.setItem(
+            "item",
+            localStorage.getItem("item").replace(title, "")
+          )
+    );
+  });
+  const basket = element.querySelector(
+    ".catalog-page__items__item__wrapper__basket"
+  );
+  if (localStorage.getItem("basket") !== null) {
+    if (~localStorage.getItem("basket").indexOf(title)) {
+      basket.classList.toggle("ordered");
+    }
+  }
+  basket.addEventListener("click", () => {
+    basket.classList.toggle("ordered");
+    if (
+      basket.classList.contains("ordered")
+        ? localStorage.setItem("basket", localStorage.getItem("basket") + title)
+        : localStorage.setItem(
+            "basket",
+            localStorage.getItem("basket").replace(title, "")
+          )
+    );
+  });
   element.querySelector(".catalog-page__items__item__img").src = img;
   element.querySelector(".catalog-page__items__item__text").textContent = title;
   element.querySelector(
     ".catalog-page__items__item__wrapper__price"
-  ).textContent = price;
+  ).textContent = String(price) + " р";
   return element;
 }
 
+function removeElements() {
+  const element = items.querySelectorAll(".catalog-page__items__item");
+  for (let i = 0; i < element.length; i++) {
+    element[i].remove();
+  }
+}
+
 filterText.addEventListener("click", () => {
-  filterPopup.classList.toggle('flex');
+  filterPopup.classList.toggle("flex");
 });
 
-for (let i = 0; i < cards.length; i++) {
-  items.prepend(
-    createElement(template, cards[i].img, cards[i].title, cards[i].price)
-  );
-}
-
-
 for (let i = 0; i < popupText.length; i++) {
-  popupText[i].addEventListener('click', ()=> {
+  popupText[i].addEventListener("click", () => {
     filterText.innerHTML = popupText[i].innerHTML;
-  })
+    filter[i].function();
+  });
 }
-
