@@ -96,12 +96,21 @@ const filterText = document.querySelector(
 const popupText = document.querySelectorAll(
   ".catalog-page__filter__search__dropdown__popup__text"
 );
-const bagsButton = document.querySelector(".catalog-page__filter__items__bags");
-const decorButton = document.querySelector(
+const bagsButton = document.querySelectorAll(
+  ".catalog-page__filter__items__bags"
+);
+const decorButton = document.querySelectorAll(
   ".catalog-page__filter__items__decor"
 );
-const allButton = document.querySelector(".catalog-page__filter__items__all");
-
+const allButton = document.querySelectorAll(
+  ".catalog-page__filter__items__all"
+);
+const mobileFilter = document.querySelector(
+  ".catalog-page__filter__mobile__filters"
+);
+const mobileFilterPopup = document.querySelector(
+  ".catalog-page__filter__mobile__popup"
+);
 const filter = [
   {
     function: () => {
@@ -155,9 +164,64 @@ const filter = [
       }
     },
   },
+  {
+    function: () => {
+      cards.sort((a, b) => {
+        return a.price - b.price;
+      });
+      removeElements();
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
+  {
+    function: () => {
+      cards.sort((a, b) => {
+        return b.price - a.price;
+      });
+      removeElements();
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
+  {
+    function: () => {
+      removeElements();
+      cards.sort((a, b) => {
+        return b.order - a.order;
+      });
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
+  {
+    function: () => {
+      removeElements();
+      cards.sort((a, b) => {
+        return a.order - b.order;
+      });
+      for (let i = 0; i < cards.length; i++) {
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+      }
+    },
+  },
 ];
-
 filter[0].function();
+
+mobileFilter.addEventListener("click", () => {
+  mobileFilterPopup.classList.toggle("undisplay");
+});
 
 function createElement(template, img, title, price) {
   const element = template.cloneNode(true);
@@ -225,40 +289,46 @@ for (let i = 0; i < popupText.length; i++) {
   });
 }
 
-bagsButton.addEventListener("click", () => {
-  removeElements();
-  bagsButton.classList.add("selected");
-  decorButton.classList.remove("selected");
-  allButton.classList.remove("selected");
-  for (let i = 0; i < cards.length; i++) {
-    if (cards[i].type == 0)
+for (let i = 0; i < bagsButton.length; i++) {
+  bagsButton[i].addEventListener("click", () => {
+    removeElements();
+    bagsButton[i].classList.add("selected");
+    decorButton[i].classList.remove("selected");
+    allButton[i].classList.remove("selected");
+    for (let i = 0; i < cards.length; i++) {
+      if (cards[i].type == 0)
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+    }
+  });
+}
+
+for (let i = 0; i < decorButton.length; i++) {
+  decorButton[i].addEventListener("click", () => {
+    removeElements();
+    bagsButton[i].classList.remove("selected");
+    decorButton[i].classList.add("selected");
+    allButton[i].classList.remove("selected");
+    for (let i = 0; i < cards.length; i++) {
+      if (cards[i].type == 1)
+        items.prepend(
+          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+        );
+    }
+  });
+}
+
+for (let i = 0; i < allButton.length; i++) {
+  allButton[i].addEventListener("click", () => {
+    removeElements();
+    bagsButton[i].classList.remove("selected");
+    decorButton[i].classList.remove("selected");
+    allButton[i].classList.add("selected");
+    for (let i = 0; i < cards.length; i++) {
       items.prepend(
         createElement(template, cards[i].img, cards[i].title, cards[i].price)
       );
-  }
-});
-
-decorButton.addEventListener("click", () => {
-  removeElements();
-  bagsButton.classList.remove("selected");
-  decorButton.classList.add("selected");
-  allButton.classList.remove("selected");
-  for (let i = 0; i < cards.length; i++) {
-    if (cards[i].type == 1)
-      items.prepend(
-        createElement(template, cards[i].img, cards[i].title, cards[i].price)
-      );
-  }
-});
-
-allButton.addEventListener("click", () => {
-  removeElements();
-  bagsButton.classList.remove("selected");
-  decorButton.classList.remove("selected");
-  allButton.classList.add("selected");
-  for (let i = 0; i < cards.length; i++) {
-    items.prepend(
-      createElement(template, cards[i].img, cards[i].title, cards[i].price)
-    );
-  }
-});
+    }
+  });
+}
