@@ -8,6 +8,10 @@
 .ordered {
   content: url('../images/icon_basket.svg');
 }
+.selected {
+  opacity: 1 !important;
+  border-bottom: 3px dashed #000000;
+}
 .display {
   display: none;
 }

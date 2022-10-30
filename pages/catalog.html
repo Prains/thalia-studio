@@ -126,11 +126,19 @@
         <h2 class="catalog-page__title title">Каталог</h2>
         <div class="catalog-page__filter">
           <div class="catalog-page__filter__items">
-            <p class="catalog-page__filter__items__text text">Все изделия</p>
-            <p class="catalog-page__filter__items__text text">
+            <p
+              class="catalog-page__filter__items__text catalog-page__filter__items__all text selected"
+            >
+              Все изделия
+            </p>
+            <p
+              class="catalog-page__filter__items__text catalog-page__filter__items__bags text pointer"
+            >
               Сумки и аксессуары
             </p>
-            <p class="catalog-page__filter__items__text text">
+            <p
+              class="catalog-page__filter__items__text catalog-page__filter__items__decor text pointer"
+            >
               Функциональный декор
             </p>
           </div>
@@ -174,6 +182,14 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="catalog-page__filter__mobile">
+          <div class="catalog-page__filter__mobile__filters__wrapper">
+            <p class="catalog-page__filter__mobile__filters text">
+              Фильтры<img src="../images/Polygon.svg" alt="" />
+            </p>
+            <img src="../images/search.svg" alt="" />
           </div>
         </div>
         <div class="catalog-page__items"></div>
@@ -232,9 +248,17 @@
         />
         <p class="catalog-page__items__item__text text"></p>
         <div class="catalog-page__items__item__wrapper">
-          <img src="../images/like.svg" alt="" class="catalog-page__items__item__wrapper__like pointer"/>
+          <img
+            src="../images/like.svg"
+            alt=""
+            class="catalog-page__items__item__wrapper__like pointer"
+          />
           <p class="catalog-page__items__item__wrapper__price text"></p>
-          <img src="../images/basket.svg" alt="" class="catalog-page__items__item__wrapper__basket pointer"/>
+          <img
+            src="../images/basket.svg"
+            alt=""
+            class="catalog-page__items__item__wrapper__basket pointer"
+          />
         </div>
       </div>
     </template>

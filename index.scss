@@ -34,6 +34,9 @@ $border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: start;
+    &__mobile {
+      display: none;
+    }
     &__items {
       display: flex;
       justify-content: center;
@@ -44,10 +47,6 @@ $border: 1px solid red;
         font-size: 14px;
         line-height: 19px;
         opacity: 0.6;
-        &:first-of-type {
-          opacity: 1;
-          border-bottom: 3px dashed #000000;
-        }
       }
     }
     &__search {
@@ -73,7 +72,7 @@ $border: 1px solid red;
         }
         &__popup {
           display: none;
-          flex-direction: column; 
+          flex-direction: column;
           justify-content: center;
           align-self: start;
           gap: 10px;
@@ -106,6 +105,8 @@ $border: 1px solid red;
   &__items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     column-gap: 27px;
     row-gap: 60px;
     &__item {
@@ -141,6 +142,64 @@ $border: 1px solid red;
         height: 264px;
         object-fit: cover;
         border-radius: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .catalog-page {
+    width: 87.5%;
+    &__title {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 38px;
+      margin-bottom: 40px;
+      margin-top: 0;
+    }
+    &__filter {
+      display: none;
+      &__mobile {
+        display: flex;
+        &__filters {
+          font-size: 14px;
+          line-height: 19px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          margin-bottom: 36px;
+          &__wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+    }
+    &__items {
+      row-gap: 36px;
+      column-gap: 25px;
+      justify-content: center;
+      align-items: center;
+      &__item {
+        overflow: hidden;
+        max-width: 130px;
+        &__img {
+          width: 121px;
+          height: 167.94px;
+        }
+        &__text {
+          font-size: 14px;
+          line-height: 160%;
+        }
+        &__wrapper {
+          &__price {
+            font-size: 14px;
+            line-height: 160%;
+          }
+        }
       }
     }
   }
