@@ -111,6 +111,23 @@ const mobileFilter = document.querySelector(
 const mobileFilterPopup = document.querySelector(
   ".catalog-page__filter__mobile__popup"
 );
+const pageSearch = document.querySelector(
+  ".catalog-page__filter__search__input"
+);
+const mobilePageSearch = document.querySelector(
+  ".catalog-page__filter__mobile__search"
+);
+const mobileSearch = document.querySelector(
+  ".catalog-page__filter__mobile__filters__search"
+);
+
+const mobileSearchWrapper = document.querySelector(
+  ".catalog-page__filter__mobile__search__wrapper"
+);
+
+const mobileSearchCross = document.querySelector(
+  ".catalog-page__filter__mobile__search__img"
+);
 const filter = [
   {
     function: () => {
@@ -332,3 +349,31 @@ for (let i = 0; i < allButton.length; i++) {
     }
   });
 }
+
+pageSearch.addEventListener("change", () => {
+  removeElements();
+  for (let i = 0; i < cards.length; i++) {
+    if (~cards[i].title.toLowerCase().indexOf(pageSearch.value))
+      items.prepend(
+        createElement(template, cards[i].img, cards[i].title, cards[i].price)
+      );
+  }
+});
+
+mobilePageSearch.addEventListener("change", () => {
+  removeElements();
+  for (let i = 0; i < cards.length; i++) {
+    if (~cards[i].title.toLowerCase().indexOf(mobilePageSearch.value))
+      items.prepend(
+        createElement(template, cards[i].img, cards[i].title, cards[i].price)
+      );
+  }
+});
+
+mobileSearch.addEventListener("click", () => {
+  mobileSearchWrapper.classList.toggle("flex");
+});
+
+mobileSearchCross.addEventListener("click", () => {
+  mobileSearchWrapper.classList.toggle("flex");
+});
