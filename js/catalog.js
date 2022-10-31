@@ -3,7 +3,7 @@ const template = document.querySelector(".catalog-template-card").content;
 const cards = [
   {
     img: "../images/catalog1.jpg",
-    title: "Торба",
+    title: "Сумка-Торба",
     price: 4200,
     order: 1,
     type: 0,
@@ -362,7 +362,11 @@ pageSearch.addEventListener("change", () => {
 mobilePageSearch.addEventListener("change", () => {
   removeElements();
   for (let i = 0; i < cards.length; i++) {
-    if (~cards[i].title.toLowerCase().indexOf(mobilePageSearch.value.toLowerCase()))
+    if (
+      ~cards[i].title
+        .toLowerCase()
+        .indexOf(mobilePageSearch.value.toLowerCase())
+    )
       items.prepend(
         createElement(template, cards[i].img, cards[i].title, cards[i].price)
       );
@@ -371,8 +375,20 @@ mobilePageSearch.addEventListener("change", () => {
 
 mobileSearch.addEventListener("click", () => {
   mobileSearchWrapper.classList.toggle("flex");
+  mobilePageSearch.value = "";
+  for (let i = 0; i < cards.length; i++) {
+    items.prepend(
+      createElement(template, cards[i].img, cards[i].title, cards[i].price)
+    );
+  }
 });
 
 mobileSearchCross.addEventListener("click", () => {
   mobileSearchWrapper.classList.toggle("flex");
+  mobilePageSearch.value = "";
+  for (let i = 0; i < cards.length; i++) {
+    items.prepend(
+      createElement(template, cards[i].img, cards[i].title, cards[i].price)
+    );
+  }
 });
