@@ -352,7 +352,7 @@ for (let i = 0; i < allButton.length; i++) {
 pageSearch.addEventListener("change", () => {
   removeElements();
   for (let i = 0; i < cards.length; i++) {
-    if (~cards[i].title.toLowerCase().indexOf(pageSearch.value))
+    if (~cards[i].title.toLowerCase().indexOf(pageSearch.value.toLowerCase()))
       items.prepend(
         createElement(template, cards[i].img, cards[i].title, cards[i].price)
       );
@@ -362,7 +362,7 @@ pageSearch.addEventListener("change", () => {
 mobilePageSearch.addEventListener("change", () => {
   removeElements();
   for (let i = 0; i < cards.length; i++) {
-    if (~cards[i].title.toLowerCase().indexOf(mobilePageSearch.value))
+    if (~cards[i].title.toLowerCase().indexOf(mobilePageSearch.value.toLowerCase()))
       items.prepend(
         createElement(template, cards[i].img, cards[i].title, cards[i].price)
       );
