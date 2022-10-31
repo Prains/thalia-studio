@@ -120,11 +120,9 @@ const mobilePageSearch = document.querySelector(
 const mobileSearch = document.querySelector(
   ".catalog-page__filter__mobile__filters__search"
 );
-
 const mobileSearchWrapper = document.querySelector(
   ".catalog-page__filter__mobile__search__wrapper"
 );
-
 const mobileSearchCross = document.querySelector(
   ".catalog-page__filter__mobile__search__img"
 );
@@ -234,6 +232,7 @@ const filter = [
     },
   },
 ];
+
 filter[0].function();
 
 mobileFilter.addEventListener("click", () => {
