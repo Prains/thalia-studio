@@ -235,6 +235,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
   }
   .catalog-page__items {
     row-gap: 36px;
