@@ -2,14 +2,14 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Thalia Studio - Каталог</title>
+    <title>Thalia Studio - Карточка товара</title>
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../vendor/normalize.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="/js/catalog-items.js"></script>
+    <script src="/js/catalog-card.js"></script>
     <script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
-    <script src="../js/catalog.js"></script>
     <script src="../js/mainpage.js"></script>
   </head>
 
@@ -131,139 +131,27 @@
       </div>
     </div>
     <main class="page">
-      <section class="catalog-page">
-        <h2 class="catalog-page__title title">Каталог</h2>
-        <div class="catalog-page__filter">
-          <div class="catalog-page__filter__items">
-            <p
-              class="catalog-page__filter__items__text catalog-page__filter__items__all text selected"
-            >
-              Все изделия
-            </p>
-            <p
-              class="catalog-page__filter__items__text catalog-page__filter__items__bags text pointer"
-            >
-              Сумки и аксессуары
-            </p>
-            <p
-              class="catalog-page__filter__items__text catalog-page__filter__items__decor text pointer"
-            >
-              Функциональный декор
-            </p>
-          </div>
-          <div class="catalog-page__filter__search">
-            <input
-              type="text"
-              class="catalog-page__filter__search__input"
-              placeholder="Поиск"
-            />
-            <div class="catalog-page__filter__search__dropdown">
+      <section class="novelties">
+        <h2 class="novelties__title title">Каталог</h2>
+        <div class="novelties__content">
+          <img src="" alt="" class="novelties__image" />
+          <div class="novelties__content__text-wrapper">
+            <h3 class="novelties__content__text-wrapper__title text"></h3>
+            <p class="novelties__content__text-wrapper__text text"></p>
+            <div class="novelties__content__text-wrapper__bottom">
               <p
-                class="catalog-page__filter__search__dropdown__text text pointer"
-              >
-                По возрастанию цены
-                <img
-                  src="../images/Polygon.svg"
-                  alt="rectangle"
-                  class="polygon"
-                />
-              </p>
-              <div class="catalog-page__filter__search__dropdown__popup">
-                <p
-                  class="catalog-page__filter__search__dropdown__popup__text text pointer"
-                >
-                  По возрастанию цены
-                </p>
-                <p
-                  class="catalog-page__filter__search__dropdown__popup__text text pointer"
-                >
-                  По убыванию цены
-                </p>
-                <p
-                  class="catalog-page__filter__search__dropdown__popup__text text pointer"
-                >
-                  Сперва новые
-                </p>
-                <p
-                  class="catalog-page__filter__search__dropdown__popup__text text pointer"
-                >
-                  Сперва старые
-                </p>
-              </div>
+                class="novelties__content__text-wrapper__bottom__text text"
+              ></p>
             </div>
+            <button
+              type="button"
+              name="button"
+              class="mainbutton text pointer novelties__content__text-wrapper__button"
+            >
+              Купить сейчас<img src="../images/arrow.svg" alt="arrowimg" />
+            </button>
           </div>
         </div>
-        <div class="catalog-page__filter__mobile">
-          <div class="catalog-page__filter__mobile__filters__wrapper">
-            <p class="catalog-page__filter__mobile__filters text">
-              Фильтры<img src="../images/Polygon.svg" alt="" />
-            </p>
-            <img
-              src="../images/search.svg"
-              alt=""
-              class="catalog-page__filter__mobile__filters__search"
-            />
-          </div>
-          <div class="catalog-page__filter__mobile__popup">
-            <div class="catalog-page__filter__mobile__firstrow">
-              <p class="catalog-page__filter__mobile__firstrow__row text">
-                Раздел:
-              </p>
-              <p
-                class="catalog-page__filter__mobile__firstrow-text text catalog-page__filter__items__all"
-              >
-                Все изделия
-              </p>
-              <p
-                class="catalog-page__filter__mobile__firstrow-text text catalog-page__filter__items__bags"
-              >
-                Сумки и аксессуары
-              </p>
-              <p
-                class="catalog-page__filter__mobile__firstrow-text text catalog-page__filter__items__decor"
-              >
-                Функциональный декор
-              </p>
-            </div>
-            <div class="catalog-page__filter__mobile__secondrow">
-              <p class="catalog-page__filter__mobile__firstrow__row text">
-                Сортировка:
-              </p>
-              <p
-                class="catalog-page__filter__mobile__secondrow__text text pointer catalog-page__filter__search__dropdown__popup__text"
-              >
-                По возрастанию цены
-              </p>
-              <p
-                class="catalog-page__filter__mobile__secondrow__text text pointer catalog-page__filter__search__dropdown__popup__text"
-              >
-                По убыванию цены
-              </p>
-              <p
-                class="catalog-page__filter__mobile__secondrow__text text pointer catalog-page__filter__search__dropdown__popup__text"
-              >
-                Сперва новые
-              </p>
-              <p
-                class="catalog-page__filter__mobile__secondrow__text text pointer catalog-page__filter__search__dropdown__popup__text"
-              >
-                Сперва старые
-              </p>
-            </div>
-          </div>
-          <div class="catalog-page__filter__mobile__search__wrapper">
-            <input
-              type="text"
-              class="catalog-page__filter__mobile__search text"
-              placeholder="Поиск"
-            /><img
-              src="../images/mobile__close.svg"
-              alt=""
-              class="catalog-page__filter__mobile__search__img"
-            />
-          </div>
-        </div>
-        <div class="catalog-page__items"></div>
       </section>
     </main>
     <footer class="footer">
@@ -316,28 +204,5 @@
         </div>
       </div>
     </footer>
-    <template class="catalog-template-card">
-      <div class="catalog-page__items__item pointer">
-        <img
-          src="../images/juta.png"
-          alt=""
-          class="catalog-page__items__item__img"
-        />
-        <p class="catalog-page__items__item__text text"></p>
-        <div class="catalog-page__items__item__wrapper">
-          <img
-            src="../images/like.svg"
-            alt=""
-            class="catalog-page__items__item__wrapper__like pointer"
-          />
-          <p class="catalog-page__items__item__wrapper__price text"></p>
-          <img
-            src="../images/basket.svg"
-            alt=""
-            class="catalog-page__items__item__wrapper__basket pointer"
-          />
-        </div>
-      </div>
-    </template>
   </body>
 </html>

@@ -1,92 +1,6 @@
 $(document).ready(() => {
   const items = document.querySelector(".catalog-page__items");
   const template = document.querySelector(".catalog-template-card").content;
-  const cards = [
-    {
-      img: "../images/catalog1.jpg",
-      title: "Сумка-Торба",
-      price: 4200,
-      order: 1,
-      type: 0,
-    },
-    {
-      img: "../images/catalog2.jpg",
-      title: "Сумка с бахромой",
-      price: 5200,
-      order: 2,
-      type: 0,
-    },
-    {
-      img: "../images/catalog3.jpg",
-      title: "Дорожка на стол",
-      price: 2000,
-      order: 3,
-      type: 1,
-    },
-    {
-      img: "../images/catalog4.jpg",
-      title: "Салфетница",
-      price: 1500,
-      order: 4,
-      type: 1,
-    },
-    {
-      img: "../images/catalog5.jpg",
-      title: "Сумка Таби",
-      price: 3200,
-      order: 5,
-      type: 0,
-    },
-    {
-      img: "../images/catalog6.jpg",
-      title: "Сумка летняя Сансара",
-      price: 5500,
-      order: 6,
-      type: 0,
-    },
-    {
-      img: "../images/catalog7.jpg",
-      title: "Сумка с рогаликами",
-      price: 4200,
-      order: 7,
-      type: 0,
-    },
-    {
-      img: "../images/catalog8.jpg",
-      title: "Кардхолдер",
-      price: 500,
-      order: 8,
-      type: 1,
-    },
-    {
-      img: "../images/catalog9.jpg",
-      title: "Бутылочница из джута",
-      price: 1500,
-      order: 9,
-      type: 1,
-    },
-    {
-      img: "../images/catalog10.jpg",
-      title: "Лежанка для питомцев",
-      price: 3000,
-      order: 10,
-      type: 1,
-    },
-    {
-      img: "../images/catalog11.jpg",
-      title: "Набор корзин «Свадебные»",
-      price: 3000,
-      order: 11,
-      type: 1,
-    },
-    {
-      img: "../images/catalog12.jpg",
-      title: "Корзина «Рыбка»",
-      price: 1200,
-      order: 12,
-      type: 1,
-    },
-  ];
   const filterPopup = $(".catalog-page__filter__search__dropdown__popup")[0];
   const filterText = $(".catalog-page__filter__search__dropdown__text")[0];
   const popupText = $(".catalog-page__filter__search__dropdown__popup__text");
@@ -115,7 +29,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -133,7 +48,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -151,7 +67,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -169,7 +86,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -187,7 +105,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -205,7 +124,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -223,7 +143,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -241,7 +162,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
         }
@@ -281,11 +203,15 @@ $(document).ready(() => {
       }
     });
   }
-  function createElement(template, img, title, price) {
+  function createElement(template, img, title, price, code) {
     const element = template.cloneNode(true);
     const heart = element.querySelector(
       ".catalog-page__items__item__wrapper__like"
     );
+    const elementImg = element.querySelector(".catalog-page__items__item__img");
+    $(elementImg).click(() => {
+      $(location).attr("href", "/pages/catalog-card.html" + "#" + code);
+    });
     if (localStorage.getItem("item") !== null) {
       if (~localStorage.getItem("item").indexOf(title)) {
         heart.classList.toggle("liked");
@@ -324,7 +250,7 @@ $(document).ready(() => {
             )
       );
     });
-    element.querySelector(".catalog-page__items__item__img").src = img;
+    elementImg.src = img;
     element.querySelector(".catalog-page__items__item__text").textContent =
       title;
     element.querySelector(
