@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./vendor/normalize.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="./js/mainpage.js" charset="utf-8"></script>
   </head>
 
   <body>
@@ -127,9 +129,9 @@
       <section class="main">
         <h1 class="main__title title">Мастерская вязаного уюта</h1>
         <img src="./images/mainimg.png" alt="mainimg" class="mainimg" />
-        <button type="button" name="button" class="mainbutton text pointer">
+        <a href="./pages/catalog.html" class="mainbutton text pointer">
           Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg" />
-        </button>
+        </a>
       </section>
       <section class="soul">
         <img src="./images/rope1.png" alt="rope" class="rope" />
@@ -183,13 +185,16 @@
         </div>
         <div class="catal__center">
           <p class="catal__center__title title">Сумки, аксесуры и декор</p>
-          <p class="catal__center__text text pointer">
+          <a
+            href="./pages/catalog.html"
+            class="catal__center__text text pointer"
+          >
             Перейти в каталог<img
               src="./images/arrow.svg"
               alt="arrowimg"
               class=""
             />
-          </p>
+          </a>
         </div>
         <div class="catal__trow">
           <p class="catal__trow__text text">
@@ -311,13 +316,12 @@
             <img src="./images/materials__rafia.png" alt="" class="care__img" />
           </div>
         </div>
-        <button
-          type="button"
-          name="button"
+        <a
+          href="./pages/catalog.html"
           class="mainbutton text pointer care__button"
         >
           Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg" />
-        </button>
+        </a>
       </section>
       <div class="overlay">
         <div class="overlay__block">
@@ -347,9 +351,9 @@
         <img src="./images/footer__logo.svg" alt="" class="footer__logo" />
         <div class="footer__nav">
           <div class="footer__menu">
-            <h3 class="menu__title text">Каталог</h3>
-            <p class="menu__text text pointer">Сумки и аксессуары</p>
-            <p class="menu__text text pointer">Функциональный декор</p>
+            <h3 class="menu__title text"><a href="./pages/catalog.html">Каталог</a></h3>
+            <p class="menu__text text pointer"><a href="./pages/catalog.html">Сумки и аксессуары</a></p>
+            <p class="menu__text text pointer"><a href="./pages/catalog.html">Функциональный декор</a></p>
             <p class="menu__text text pointer">
               <a href="./pages/novelties.html">Новинки</a>
             </p>
@@ -358,7 +362,7 @@
             <h3 class="menu__title text">
               <a href="./pages/paymentndelivery.html">Оплата и доставка</a>
             </h3>
-            <p class="menu__text text pointer">Как заказать</p>
+            <p class="menu__text text pointer"><a href="./pages/paymentndelivery.html">Как заказать</a></p>
             <p class="menu__text text pointer">
               <a href="./pages/tradenreturn.html">Обмен и возврат</a>
             </p>
@@ -386,6 +390,5 @@
         </div>
       </div>
     </footer>
-    <script src="./js/mainpage.js" charset="utf-8"></script>
   </body>
 </html>
