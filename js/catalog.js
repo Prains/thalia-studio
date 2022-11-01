@@ -24,15 +24,18 @@ $(document).ready(() => {
         });
         removeElements();
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -43,15 +46,18 @@ $(document).ready(() => {
         });
         removeElements();
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -62,15 +68,18 @@ $(document).ready(() => {
           return b.order - a.order;
         });
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -81,15 +90,18 @@ $(document).ready(() => {
           return a.order - b.order;
         });
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -100,15 +112,18 @@ $(document).ready(() => {
         });
         removeElements();
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -119,15 +134,18 @@ $(document).ready(() => {
         });
         removeElements();
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -138,15 +156,18 @@ $(document).ready(() => {
           return b.order - a.order;
         });
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -157,15 +178,18 @@ $(document).ready(() => {
           return a.order - b.order;
         });
         for (let i = 0; i < cards.length; i++) {
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
         }
       },
     },
@@ -179,9 +203,18 @@ $(document).ready(() => {
   function renderTypes(type) {
     for (let i = 0; i < cards.length; i++) {
       if (cards[i].type == type) {
-        items.prepend(
-          createElement(template, cards[i].img, cards[i].title, cards[i].price, cards[i].code)
-        );
+        $(items)
+          .hide()
+          .prepend(
+            createElement(
+              template,
+              cards[i].img,
+              cards[i].title,
+              cards[i].price,
+              cards[i].code
+            )
+          )
+          .fadeIn(100);
       } else if (type == "default") {
         filter[0].function();
       }
@@ -192,15 +225,18 @@ $(document).ready(() => {
       removeElements();
       for (let i = 0; i < cards.length; i++) {
         if (~cards[i].title.toLowerCase().indexOf(listener.value.toLowerCase()))
-          items.prepend(
-            createElement(
-              template,
-              cards[i].img,
-              cards[i].title,
-              cards[i].price,
-              cards[i].code
+          $(items)
+            .hide()
+            .prepend(
+              createElement(
+                template,
+                cards[i].img,
+                cards[i].title,
+                cards[i].price,
+                cards[i].code
+              )
             )
-          );
+            .fadeIn(100);
       }
     });
   }
@@ -260,11 +296,15 @@ $(document).ready(() => {
     return element;
   }
   function removeElements() {
-    $(".catalog-page__items__item").remove();
+    $(".catalog-page__items__item").fadeOut(100, () => {
+      $(this).remove();
+    });
   }
   function resetMobile(listener) {
     $(listener).click(() => {
-      mobileSearchWrapper.classList.toggle("flex");
+      $(mobileSearchWrapper).slideToggle(400, () => {
+        mobileSearchWrapper.classList.toggle("flex");
+      });
       mobilePageSearch.value = "";
       filter[0].function();
     });
@@ -287,10 +327,12 @@ $(document).ready(() => {
     buttonRender(allButton[i], "default");
   }
   $(mobileFilter).click(() => {
-    mobileFilterPopup.classList.toggle("undisplay");
+    $(mobileFilterPopup).slideToggle();
   });
   $(filterText).click(() => {
-    filterPopup.classList.toggle("flex");
+    $(filterPopup).slideToggle(400, () => {
+      filterPopup.classList.toggle("flex");
+    });
   });
   for (let i = 0; i < popupText.length; i++) {
     $(popupText[i]).click(() => {

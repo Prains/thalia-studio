@@ -1,6 +1,7 @@
 .catalog-page {
   max-width: 880px;
   margin: 30px auto 150px auto;
+  min-height: 100vh;
 }
 .catalog-page__title {
   margin: 0 auto 70px auto;
