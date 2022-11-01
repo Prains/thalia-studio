@@ -1,7 +1,7 @@
 const cards = [
     {
       img: "../images/catalog1.jpg",
-      title: "Сумка-Торба",
+      title: "Сумка-торба",
       price: 4200,
       order: 1,
       type: 0,

@@ -1,4 +1,3 @@
-
 $(document).ready(() => {
   let matJutPop = document.getElementById("material__jute__popup");
   let matRafPop = document.getElementById("material__rafia__popup");
@@ -30,7 +29,9 @@ $(document).ready(() => {
   });
 
   burgCatTitle.addEventListener("click", () => {
-    burgCatPopup.classList.toggle("undisplay");
+    $(burgCatPopup).slideToggle(400, () => {
+      burgCatPopup.classList.toggle("undisplay");
+    });
   });
 
   burgcls.addEventListener("click", () => {
