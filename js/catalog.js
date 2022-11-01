@@ -180,7 +180,7 @@ $(document).ready(() => {
     for (let i = 0; i < cards.length; i++) {
       if (cards[i].type == type) {
         items.prepend(
-          createElement(template, cards[i].img, cards[i].title, cards[i].price)
+          createElement(template, cards[i].img, cards[i].title, cards[i].price, cards[i].code)
         );
       } else if (type == "default") {
         filter[0].function();
@@ -197,7 +197,8 @@ $(document).ready(() => {
               template,
               cards[i].img,
               cards[i].title,
-              cards[i].price
+              cards[i].price,
+              cards[i].code
             )
           );
       }
