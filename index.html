@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./vendor/normalize.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   </head>
 
   <body>
     <header class="header">
       <a href="/index.html" class="logoimg">
-        <img src="./images/logo.svg" alt="logoimg" class="logoimg pointer" />
+        <img src="./images/logo.svg" alt="logoimg" class="logoimg pointer lazyload" />
       </a>
       <div class="menu">
         <div class="catalog">
           <p class="header__text text pointer header__text__catalog">Каталог</p>
-          <img src="./images/Polygon.svg" alt="rectangle" class="polygon" />
+          <img src="./images/Polygon.svg" alt="rectangle" class="polygon lazyload" />
           <div class="catalog__popup">
             <p class="catalog__popup__text text pointer">
               <a href="./pages/catalog.html">Все изделия</a>
@@ -40,8 +41,8 @@
         </p>
       </div>
       <div class="headerimges">
-        <img src="./images/like.svg" alt="like" class="like pointer" />
-        <img src="./images/basket.svg" alt="basket" class="basket pointer" />
+        <img src="./images/like.svg" alt="like" class="like pointer lazyload" />
+        <img src="./images/basket.svg" alt="basket" class="basket pointer lazyload" />
         <img
           src="./images/header__vector.svg"
           alt="burger"
@@ -59,8 +60,8 @@
           />
         </a>
         <div class="burger__header__imges">
-          <img src="./images/like.svg" alt="like" class="like pointer" />
-          <img src="./images/basket.svg" alt="basket" class="basket pointer" />
+          <img src="./images/like.svg" alt="like" class="like pointer lazyload" />
+          <img src="./images/basket.svg" alt="basket" class="basket pointer lazyload" />
           <img
             src="./images/burger__vector.svg"
             alt="vector"
@@ -73,7 +74,7 @@
           <p class="header__text text pointer burger__catalog__title">
             Каталог
           </p>
-          <img src="./images/Polygon.svg" alt="rectangle" class="polygon" />
+          <img src="./images/Polygon.svg" alt="rectangle" class="polygon lazyload" />
         </div>
         <div class="burger__content__catalog-popup">
           <p class="burger__content__catalog-popup__text text pointer">
@@ -126,13 +127,13 @@
     <main class="page">
       <section class="main">
         <h1 class="main__title title">Мастерская вязаного уюта</h1>
-        <img src="./images/mainimg.png" alt="mainimg" class="mainimg" />
+        <img src="./images/mainimg.png" alt="mainimg" class="mainimg lazyload" />
         <a href="./pages/catalog.html" class="mainbutton text pointer">
           Перейти в каталог<img src="./images/arrow.svg" alt="arrowimg" />
         </a>
       </section>
       <section class="soul">
-        <img src="./images/rope1.png" alt="rope" class="rope" />
+        <img src="./images/rope1.png" alt="rope" class="rope lazyload" />
         <div class="soul__section">
           <h2 class="title soul__title">Для души и красоты</h2>
           <p class="text soul__text">
@@ -142,7 +143,7 @@
           </p>
           <div class="soul__subsection">
             <p class="subsection__text title">Ручная работа</p>
-            <img src="./images/image_jute.png" alt="jute" />
+            <img src="./images/image_jute.png" alt="jute" class="lazyload" />
             <div class="soul__undertext">
               <p class="undertext__uppertitle title">Джут</p>
               <p class="undertext__text text">
@@ -151,14 +152,14 @@
             </div>
           </div>
           <div class="soul__imgrow">
-            <img src="./images/handmade.png" alt="" />
+            <img src="./images/handmade.png" alt="" class="lazyload"/>
             <div class="imgrow__text">
               <p class="undertext__uppertitle title">Рафия</p>
               <p class="undertext__text text">
                 Натуральное волокно из листьев пальмы
               </p>
             </div>
-            <img src="./images/rafia.png" alt="" />
+            <img src="./images/rafia.png" alt="" class="lazyload"/>
           </div>
         </div>
       </section>
@@ -388,7 +389,13 @@
         </div>
       </div>
     </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <div class="preloader-3">
+      <svg viewBox="-2000 -1000 4000 2000">
+          <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+          <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+      </svg>
+  </div>
+    <script src="/js/preloader.js"></script>
     <script src="./js/mainpage.js" charset="utf-8"></script>
   </body>
 </html>

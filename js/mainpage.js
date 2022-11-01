@@ -1,3 +1,4 @@
+
 $(document).ready(() => {
   let matJutPop = document.getElementById("material__jute__popup");
   let matRafPop = document.getElementById("material__rafia__popup");
@@ -19,12 +20,6 @@ $(document).ready(() => {
   let burg = document.querySelector(".burger");
   let burgcls = document.querySelector(".burger__vector");
   let burgCatPopup = document.querySelector(".burger__content__catalog-popup");
-  let pageContent = [
-    (page = document.querySelector(".page")),
-    (footer = document.querySelector(".footer")),
-    (header = document.querySelector(".header")),
-  ];
-
   headBurgLink.addEventListener("click", () => {
     for (let i = 0; i < pageContent.length; i++) {
       pageContent[i].classList.toggle("display");
