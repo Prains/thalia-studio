@@ -23,8 +23,12 @@ $(document).ready(() => {
     for (let i = 0; i < pageContent.length; i++) {
       pageContent[i].classList.toggle("display");
     }
+    $(".burger__content").hide();
+    $(".burger__footer").hide();
     $(burg).slideToggle(400, () => {
       burg.classList.toggle("flex");
+      $(".burger__content").fadeIn();
+      $(".burger__footer").fadeIn();
     });
   });
 

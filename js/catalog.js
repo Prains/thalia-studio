@@ -300,13 +300,20 @@ $(document).ready(() => {
       $(this).remove();
     });
   }
+  function searchAppear() {
+    $(mobileSearchWrapper).slideToggle(400, () => {
+      mobileSearchWrapper.classList.toggle("flex");
+      $(mobileSearchCross).fadeIn();
+    });
+  }
   function resetMobile(listener) {
     $(listener).click(() => {
-      $(mobileSearchWrapper).slideToggle(400, () => {
-        mobileSearchWrapper.classList.toggle("flex");
-      });
+      if (mobileFilterPopup.style.display == "block")
+        $(mobileFilterPopup).slideToggle();
+      $(mobileSearchCross).hide();
+      searchAppear();
       mobilePageSearch.value = "";
-      filter[0].function();
+      if (mobileSearchWrapper.classList.contains("flex")) filter[0].function();
     });
   }
   function buttonRender(button, types) {
@@ -327,6 +334,7 @@ $(document).ready(() => {
     buttonRender(allButton[i], "default");
   }
   $(mobileFilter).click(() => {
+    if (mobileSearchWrapper.classList.contains("flex")) searchAppear();
     $(mobileFilterPopup).slideToggle();
   });
   $(filterText).click(() => {
