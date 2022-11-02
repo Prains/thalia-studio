@@ -94,6 +94,7 @@
 
   .soul {
     margin-bottom: 40px;
+    display: none;
   }
 
   .soul__title {

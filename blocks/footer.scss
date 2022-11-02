@@ -29,6 +29,10 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+  &:hover {
+    transition: all ease 0.3s;
+    opacity: 0.7;
+  }
 }
 
 .footer__nav {
@@ -80,14 +84,14 @@
       gap: 21px;
     }
     &__social {
-        margin-top: 40px;
-        &__icons {
-            gap: 20px;
-        }
-        &__text {
-            margin: 0;
-            text-align: center;
-        }
+      margin-top: 40px;
+      &__icons {
+        gap: 20px;
+      }
+      &__text {
+        margin: 0;
+        text-align: center;
+      }
     }
   }
 }
