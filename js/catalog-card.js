@@ -3,7 +3,7 @@ $(document).ready(() => {
   let cardImg = $(".novelties__image");
   let cardDesc = $(".novelties__content__text-wrapper__text");
   let galImg = $(".novelties__cards");
-  let cardLink = $('.card-link');
+  let cardLink = $(".card-link");
   for (let i = 0; i < galImg.length; i++) {
     $(galImg).hide();
   }
@@ -14,7 +14,7 @@ $(document).ready(() => {
       $(cardImg).attr("src", cards[i].img);
       $(cardDesc).text(cards[i].desc);
       for (let v = 0; v < cards[i].imges.length; v++) {
-        $(cardLink).attr('data-src', $(galImg[0]).attr("src"));
+        $(cardLink).attr("data-src", $(galImg[0]).attr("src"));
         $(galImg[v]).attr("src", cards[i].imges[v]).show();
       }
     }
@@ -24,7 +24,7 @@ $(document).ready(() => {
       $(".novelties__cards").removeClass("selected-card");
       $(galImg[i]).addClass("selected-card");
       $(cardImg).fadeOut(400, () => {
-        $(cardLink).attr('data-src', $(galImg[i]).attr("src"));
+        $(cardLink).attr("data-src", $(galImg[i]).attr("src"));
         $(cardImg).attr("src", $(galImg[i]).attr("src")).fadeIn();
       });
     });
