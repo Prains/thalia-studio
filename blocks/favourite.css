@@ -1,0 +1,28 @@
+.favourite {
+  max-width: 880px;
+  margin: 30px auto 150px auto;
+}
+.favourite__title {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 78px;
+  color: #282828;
+  text-align: center;
+}
+.favourite__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  align-items: start;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .favourite {
+    margin-bottom: 80px;
+  }
+  .favourite__title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+}/*# sourceMappingURL=favourite.css.map */

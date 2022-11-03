@@ -15,21 +15,10 @@
 @import url(/blocks/catalog-page.css);
 @import url(/blocks/preloader.css);
 @import url(https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css);
+@import url(/blocks/favourite.css);
 
 $border: 1px solid red;
 
 * {
   box-sizing: border-box;
-}
-
-.preloader-3 {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  .preloader-image {
-    overflow: hidden;
-  }
 }

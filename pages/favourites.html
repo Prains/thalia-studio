@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Thalia Studio - Оплата и доставка</title>
+    <title>Thalia Studio - Избранное</title>
     <link rel="stylesheet" href="../index.css" />
     <link rel="stylesheet" href="../vendor/normalize.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,9 +34,7 @@
           <a href="../pages/novelties.html">Новинки</a>
         </p>
         <p class="header__text text pointer">
-          <a href="../pages/paymentndelivery.html" class="bold"
-            >Оплата и доставка</a
-          >
+          <a href="../pages/paymentndelivery.html">Оплата и доставка</a>
         </p>
         <p class="header__text text pointer">
           <a href="./contacts.html">Контакты</a>
@@ -131,54 +129,9 @@
       </div>
     </div>
     <main class="page">
-      <section class="payment">
-        <h2 class="payment__title title">Оплата и доставка</h2>
-        <div class="payment__top">
-          <div class="payment__top__text">
-            <div class="payment__top__text-wrapper">
-              <h2 class="payment__top__text-wrapper__title title">
-                Сроки изготовления
-              </h2>
-              <p class="payment__top__text-wrapper__text text">
-                Каждое изделие вяжется по Вашему заказу, срок изготовления
-                составляет от 7 до 20 дней с учетом текущих заказов. Но по
-                возможности мы стараемся связать изделие как можно быстрее.
-              </p>
-            </div>
-            <div class="payment__top__text-wrapper">
-              <h2 class="payment__top__text-wrapper__title title">Оплата</h2>
-              <p class="payment__top__text-wrapper__text text">
-                Оплата на сайте 100% с помощью банковской карты. Возможна оплата
-                2 частями: 50% во время заказа и 50% по готовности изделия, для
-                этого напишите нам любым удобным способом по WhatsApp,
-                VKontakte, в Telegram или Instagram.
-              </p>
-            </div>
-          </div>
-          <img
-            src="../images/payment__mainimg.jpg"
-            alt="klubok ogromniy"
-            class="payment__img"
-          />
-        </div>
-        <h2 class="payment__top__text-wrapper__title title">
-          Доставка по миру
-        </h2>
-        <p class="payment__top__text-wrapper__text text">
-          Доставляем с помощью курьерской службы СДЭК и Почтой России. Стоимость
-          рассчитывается индивидуально, исходя из удаленности Вашего города от
-          г.Москва. Для расчета стоимости доставки напишите нам по WhatsApp,
-          VKontakte, в Telegram или Instagram.
-        </p>
-        <h2 class="payment__top__text-wrapper__title title">
-          Доставка по Москве
-        </h2>
-        <p class="payment__top__text-wrapper__text text">
-          Доставку Ваших заказов по Москве может осуществить курьер, стоимость
-          доставки - 200 руб. Возможен самовыоз по предварительной
-          договоренности, для этого напишите нам по WhatsApp, VKontakte, в
-          Telegram или Instagram.
-        </p>
+      <section class="favourite">
+        <h2 class="favourite__title title">Избранное</h2>
+        <div class="favourite__items"></div>
       </section>
     </main>
     <footer class="footer">
@@ -186,9 +139,15 @@
         <img src="../images/footer__logo.svg" alt="" class="footer__logo" />
         <div class="footer__nav">
           <div class="footer__menu">
-            <h3 class="menu__title text"><a href="/pages/catalog.html">Каталог</a></h3>
-            <p class="menu__text text pointer"><a href="/pages/catalog.html">Сумки и аксессуары</a></p>
-            <p class="menu__text text pointer"><a href="/pages/catalog.html">Функциональный декор</a></p>
+            <h3 class="menu__title text">
+              <a href="/pages/catalog.html">Каталог</a>
+            </h3>
+            <p class="menu__text text pointer">
+              <a href="/pages/catalog.html">Сумки и аксессуары</a>
+            </p>
+            <p class="menu__text text pointer">
+              <a href="/pages/catalog.html">Функциональный декор</a>
+            </p>
             <p class="menu__text text pointer">
               <a href="/pages/novelties.html">Новинки</a>
             </p>
@@ -225,10 +184,35 @@
         </div>
       </div>
     </footer>
+    <template class="catalog-template-card">
+      <div class="catalog-page__items__item pointer">
+        <img
+          src="../images/juta.png"
+          alt=""
+          class="catalog-page__items__item__img"
+        />
+        <p class="catalog-page__items__item__text text"></p>
+        <div class="catalog-page__items__item__wrapper">
+          <img
+            src="/images/trash.svg" 
+            alt=""
+            class="catalog-page__items__item__wrapper__like pointer"
+          />
+          <p class="catalog-page__items__item__wrapper__price text"></p>
+          <img
+            src="../images/basket.svg"
+            alt=""
+            class="catalog-page__items__item__wrapper__basket pointer"
+          />
+        </div>
+      </div>
+    </template>
     <div class="preloader-3">
-      <img src="/images/preloader.gif" alt="" class="preloader-image">
-  </div>
+      <img src="/images/preloader.gif" alt="" class="preloader-image" />
+    </div>
     <script src="/js/preloader.js"></script>
+    <script src="/js/catalog-items.js"></script>
+    <script src="/js/favourite.js"></script>
     <script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
     <script src="../js/mainpage.js"></script>
   </body>
