@@ -8,12 +8,28 @@ $(document).ready(() => {
       ".catalog-page__items__item__wrapper__like"
     );
     const elementImg = element.querySelector(".catalog-page__items__item__img");
+    const radiusMinus = element.querySelector('.minus');
+    const radiusPlus = element.querySelector('.plus');
+    const radiusText = element.querySelector('.catalog-page__items__item__bottom__text')
     element.querySelector(".catalog-page__items__item__text").textContent =
       title;
     element.querySelector(
       ".catalog-page__items__item__wrapper__price"
     ).textContent = String(price) + " р";
     elementImg.src = img;
+
+      $(radiusMinus).click(()=>{
+        if (Number(radiusText.textContent) <= 1) return;
+        let text = Number(radiusText.textContent);
+        text--;
+        radiusText.textContent = String(text);
+      })
+
+      $(radiusPlus).click(()=>{
+        let text = Number(radiusText.textContent);
+        text++;
+        radiusText.textContent = String(text);
+      })
 
     $(elementImg).click(() => {
       $(location).attr("href", "/pages/catalog-card.html" + "#" + code);

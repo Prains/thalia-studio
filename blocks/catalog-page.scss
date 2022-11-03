@@ -122,6 +122,16 @@
           object-fit: cover;
           border-radius: 100px;
         }
+        &__bottom {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: center;
+          &__radius {
+            width: 30px;
+            height: 30px;
+          }
+        }
       }
     }
   }
@@ -258,6 +268,13 @@
             &__price {
               font-size: 14px;
               line-height: 160%;
+            }
+          }
+          &__bottom {
+            gap: 10px;
+            &__radius {
+              width: 20px;
+              height: 22px;
             }
           }
         }

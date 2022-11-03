@@ -125,6 +125,16 @@
      object-fit: cover;
   border-radius: 100px;
 }
+.catalog-page__items__item__bottom {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.catalog-page__items__item__bottom__radius {
+  width: 30px;
+  height: 30px;
+}
 
 @media screen and (max-width: 768px) {
   .catalog-page {
@@ -261,5 +271,12 @@
   .catalog-page__items__item__wrapper__price {
     font-size: 14px;
     line-height: 160%;
+  }
+  .catalog-page__items__item__bottom {
+    gap: 10px;
+  }
+  .catalog-page__items__item__bottom__radius {
+    width: 20px;
+    height: 22px;
   }
 }/*# sourceMappingURL=catalog-page.css.map */
